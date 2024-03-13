@@ -16,11 +16,11 @@ public class loginPage {
 	}
 	
 	//identify the web elements
-	@FindBy(id = "user-name")
+	@FindBy(xpath = "//input[@id='user-name']")
 	WebElement username;
-	@FindBy(id = "password")
+	@FindBy(xpath = "//input[@id='password']")
 	WebElement password;
-	@FindBy(id = "login-button")
+	@FindBy(xpath = "//input[@id='login-button']")
 	WebElement loginbutton;
 	
 	//identify action on the web elements

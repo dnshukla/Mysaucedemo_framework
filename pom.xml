@@ -61,6 +61,6 @@
     <artifactId>log4j-api</artifactId>
     <version>3.0.0-beta1</version>
   </dependency>
-  
+
   </dependencies>
 </project>
