@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite list]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Chrometest(failed)">
+<suite thread-count="1" name="Failed suite [Suite list]" guice-stage="DEVELOPMENT" verbose="10">
+  <listeners>
+    <listener class-name="com.mysauce.reports.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="1" name="Chrometest(failed)" verbose="10">
     <parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.mysauce.testcases.TClogin">
         <methods>
+          <include name="verifypasswordrequiredtest"/>
           <include name="tearDown"/>
           <include name="verifyvalidlogintest"/>
           <include name="setup"/>

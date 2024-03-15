@@ -5,9 +5,13 @@
     <classes>
       <class name="com.mysauce.testcases.TClogin">
         <methods>
-          <include name="steup"/>
+          <include name="verifyusernamerequiredtest"/>
+          <include name="verifypasswordrequiredtest"/>
           <include name="tearDown"/>
-          <include name="verifylogin"/>
+          <include name="verifylockedoutusertest"/>
+          <include name="verifyinvalidcredentailtest"/>
+          <include name="verifyvalidlogintest"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- com.mysauce.testcases.TClogin -->
     </classes>

@@ -149,6 +149,8 @@
                   <a name="verifyinvalidcredentailtest">
                   </a> <!-- verifyinvalidcredentailtest -->
                   <span class="method-name">verifyinvalidcredentailtest</span>
+                  <em>
+(To verify Login with invalid user credentials)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -156,6 +158,8 @@
                   <a name="verifylockedoutusertest">
                   </a> <!-- verifylockedoutusertest -->
                   <span class="method-name">verifylockedoutusertest</span>
+                  <em>
+(To verify Login with locked out user credentials)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -163,6 +167,8 @@
                   <a name="verifypasswordrequiredtest">
                   </a> <!-- verifypasswordrequiredtest -->
                   <span class="method-name">verifypasswordrequiredtest</span>
+                  <em>
+(To verify the password required field validation)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -170,6 +176,8 @@
                   <a name="verifyusernamerequiredtest">
                   </a> <!-- verifyusernamerequiredtest -->
                   <span class="method-name">verifyusernamerequiredtest</span>
+                  <em>
+(To verify the user name required field validation)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -177,6 +185,8 @@
                   <a name="verifyvalidlogintest">
                   </a> <!-- verifyvalidlogintest -->
                   <span class="method-name">verifyvalidlogintest</span>
+                  <em>
+(To verify Login with valid credentials)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -190,8 +200,11 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite list&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;1&quot; name=&quot;Chrometest&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; name=&quot;Suite list&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;10&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.mysauce.reports.ExtentReportListener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;2&quot; name=&quot;Chrometest&quot; verbose=&quot;10&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.mysauce.testcases.TClogin&quot;/&gt;
@@ -238,28 +251,28 @@ data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyvalidlogintest')
 data.setCell(0, 2, 'com.mysauce.testcases.TClogin')
-data.setCell(0, 3, 32215);
+data.setCell(0, 3, 21303);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifylockedoutusertest')
 data.setCell(1, 2, 'com.mysauce.testcases.TClogin')
-data.setCell(1, 3, 5567);
+data.setCell(1, 3, 1713);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verifyinvalidcredentailtest')
 data.setCell(2, 2, 'com.mysauce.testcases.TClogin')
-data.setCell(2, 3, 1155);
+data.setCell(2, 3, 636);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyusernamerequiredtest')
+data.setCell(3, 1, 'verifypasswordrequiredtest')
 data.setCell(3, 2, 'com.mysauce.testcases.TClogin')
-data.setCell(3, 3, 647);
+data.setCell(3, 3, 583);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifypasswordrequiredtest')
+data.setCell(4, 1, 'verifyusernamerequiredtest')
 data.setCell(4, 2, 'com.mysauce.testcases.TClogin')
-data.setCell(4, 3, 347);
+data.setCell(4, 3, 401);
 window.suiteTableData['Suite_list']= { tableData: data, tableDiv: 'times-div-Suite_list'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 39 seconds</span>
+              <span class="suite-total-time">Total running time: 24 seconds</span>
               <div id="times-div-Suite_list">
               </div> <!-- times-div-Suite_list -->
             </div> <!-- times-div -->
@@ -292,27 +305,27 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyvalidlogintest</span>
-                <span class="method-start">8740 ms</span>
+                <span class="method-start">8527 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifylockedoutusertest</span>
-                <span class="method-start">40965 ms</span>
+                <span class="method-start">29859 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyinvalidcredentailtest</span>
-                <span class="method-start">46535 ms</span>
+                <span class="method-start">31578 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyusernamerequiredtest</span>
-                <span class="method-start">47695 ms</span>
+                <span class="method-start">32220 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifypasswordrequiredtest</span>
-                <span class="method-start">48345 ms</span>
+                <span class="method-start">32628 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">48695 ms</span>
+                <span class="method-start">33215 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

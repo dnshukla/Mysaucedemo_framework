@@ -10,7 +10,7 @@ import com.mysauce.pageobject.loginPage;
 
 public class TClogin extends BaseClass{
 	
-	@Test(priority = 1)
+	@Test(priority = 1, description = "To verify Login with valid credentials")
 	public void verifyvalidlogintest() {
 		
 		//Open url
@@ -33,7 +33,7 @@ public class TClogin extends BaseClass{
 		
 	}
 	
-	@Test(priority = 2)
+	@Test(priority = 2, description = "To verify Login with locked out user credentials")
     public void verifylockedoutusertest() {
 		
 		//Open url
@@ -55,13 +55,14 @@ public class TClogin extends BaseClass{
         Assert.assertEquals(actualErrorMessage, expectedErrorMessage, "Validation message doesn't match.");
 	}
 	
-	@Test(priority = 3)
+	@Test(priority = 3, description = "To verify Login with invalid user credentials")
     public void verifyinvalidcredentailtest() {
 		
 		//Open url
 		driver.get(url);
 			
 		//Login with invalid user credentials
+		
 		loginPage lp = new loginPage(driver);
 		lp.enteruname("ABC");
 		lp.enterpassword("Test_123");
@@ -77,7 +78,7 @@ public class TClogin extends BaseClass{
         Assert.assertEquals(actualErrorMessage, expectedErrorMessage, "Validation message doesn't match.");
 	}
 	
-	@Test(priority = 4)
+	@Test(priority = 4, description = "To verify the user name required field validation")
     public void verifyusernamerequiredtest() {
 		
 		//Open url
@@ -97,7 +98,7 @@ public class TClogin extends BaseClass{
         Assert.assertEquals(actualErrorMessage, expectedErrorMessage, "Validation message doesn't match.");
 	}
 	
-	@Test(priority = 5)
+	@Test(priority = 5, description = "To verify the password required field validation")
     public void verifypasswordrequiredtest() {
 		
 		//Open url
